@@ -14,6 +14,9 @@ import { EjdirectivangifComponent } from './ejdirectivangif/ejdirectivangif.comp
 import { EjdirectivangstyleComponent } from './ejdirectivangstyle/ejdirectivangstyle.component';
 import { EjdirectivangclassComponent } from './ejdirectivangclass/ejdirectivangclass.component';
 import { EjdirectivangforComponent } from './ejdirectivangfor/ejdirectivangfor.component';
+import { DirectivamenuDirective } from './directivamenu.directive';
+import { C1Component } from './c1/c1.component';
+import { TestdirectivamenuComponent } from './testdirectivamenu/testdirectivamenu.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import { EjdirectivangforComponent } from './ejdirectivangfor/ejdirectivangfor.c
     EjdirectivangifComponent,
     EjdirectivangstyleComponent,
     EjdirectivangclassComponent,
-    EjdirectivangforComponent
+    EjdirectivangforComponent,
+    DirectivamenuDirective,
+    C1Component,
+    TestdirectivamenuComponent
   ],
   imports: [
     BrowserModule,
