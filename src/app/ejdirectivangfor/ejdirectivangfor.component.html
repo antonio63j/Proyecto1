@@ -1,5 +1,5 @@
 <h3>Cursos Disponibles</h3>
-<h4>Carpeta implicada: .app\ejdirectivangfor y nuestro pipe para euros creado .app\pipeeuro.pipe.ts</h4>
+<h4>Carpeta implicada: .app\ejdirectivangfor y nuestros pipes para euros creados .app\pipeeuro.pipe.ts y .\app\mispipes\pipeeuro2.pipe.ts</h4>
 <ul>
   <li style="display: inline-block;" *ngFor="let curso of cursos">
   <h2 >{{curso}};</h2>
@@ -7,5 +7,9 @@
   <br>
   <li style="display: inline-block;" *ngFor="let precio of precios">
   <h2>{{precio | pipeeuro}};</h2>
+  </li>
+  <br>
+  <li style="display: inline-block;" *ngFor="let precio of precios">
+  <h2>{{precio | pipeeuro2}};</h2>
   </li>
 </ul>

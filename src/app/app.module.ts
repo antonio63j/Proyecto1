@@ -19,7 +19,12 @@ import { C1Component } from './c1/c1.component';
 import { TestdirectivamenuComponent } from './testdirectivamenu/testdirectivamenu.component';
 import { UsodirectivainputpadreComponent } from './usodirectivainputpadre/usodirectivainputpadre.component';
 import { UsodirectivainputhijoComponent } from './usodirectivainputhijo/usodirectivainputhijo.component';
-import { PipeeuroPipe } from './pipeeuro.pipe';
+import { PipeeuroPipe } from './mispipes/pipeeuro.pipe';
+import { Pipeeuro2Pipe } from './mispipes/pipeeuro2.pipe';
+import { TestproveedoresComponent } from './testproveedores/testproveedores.component';
+
+// Importacion de servicios
+import { ProveedoresService } from './servicios/proveedores.service';
 
 @NgModule({
   declarations: [
@@ -39,13 +44,17 @@ import { PipeeuroPipe } from './pipeeuro.pipe';
     TestdirectivamenuComponent,
     UsodirectivainputpadreComponent,
     UsodirectivainputhijoComponent,
-    PipeeuroPipe
+    PipeeuroPipe,
+    Pipeeuro2Pipe,
+    TestproveedoresComponent
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    ProveedoresService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
