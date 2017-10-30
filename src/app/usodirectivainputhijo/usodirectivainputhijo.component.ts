@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./usodirectivainputhijo.component.css']
 })
 export class UsodirectivainputhijoComponent implements OnInit {
-
+  @Input() titulo: string;
   @Input() aviso: string;
 
   constructor() { }

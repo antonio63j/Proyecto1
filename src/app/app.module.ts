@@ -19,6 +19,7 @@ import { C1Component } from './c1/c1.component';
 import { TestdirectivamenuComponent } from './testdirectivamenu/testdirectivamenu.component';
 import { UsodirectivainputpadreComponent } from './usodirectivainputpadre/usodirectivainputpadre.component';
 import { UsodirectivainputhijoComponent } from './usodirectivainputhijo/usodirectivainputhijo.component';
+import { PipeeuroPipe } from './pipeeuro.pipe';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { UsodirectivainputhijoComponent } from './usodirectivainputhijo/usodirec
     C1Component,
     TestdirectivamenuComponent,
     UsodirectivainputpadreComponent,
-    UsodirectivainputhijoComponent
+    UsodirectivainputhijoComponent,
+    PipeeuroPipe
   ],
   imports: [
     BrowserModule,

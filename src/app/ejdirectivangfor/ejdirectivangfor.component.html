@@ -1,6 +1,11 @@
 <h3>Cursos Disponibles</h3>
+<h4>Carpeta implicada: .app\ejdirectivangfor y nuestro pipe para euros creado .app\pipeeuro.pipe.ts</h4>
 <ul>
-  <li *ngFor="let curso of cursos">
-  <h4>{{curso}}</h4>
+  <li style="display: inline-block;" *ngFor="let curso of cursos">
+  <h2 >{{curso}};</h2>
+  </li>
+  <br>
+  <li style="display: inline-block;" *ngFor="let precio of precios">
+  <h2>{{precio | pipeeuro}};</h2>
   </li>
 </ul>
