@@ -22,9 +22,22 @@ import { UsodirectivainputhijoComponent } from './usodirectivainputhijo/usodirec
 import { PipeeuroPipe } from './mispipes/pipeeuro.pipe';
 import { Pipeeuro2Pipe } from './mispipes/pipeeuro2.pipe';
 import { TestproveedoresComponent } from './testproveedores/testproveedores.component';
+import { InicioComponent } from './inicio/inicio.component';
 
 // Importacion de servicios
 //import { ProveedoresService } from './servicios/proveedores.service';
+
+import {Routes, RouterModule} from '@angular/router';
+import { HeaderComponent } from './header/header.component';
+import { AddproveeComponent } from './formproveedores/addprovee/addprovee.component';
+
+const routes: Routes = [
+  {path:'', component: InicioComponent},
+  {path: 'testproveedores',component: TestproveedoresComponent},
+  {path: 'directivainput',component: UsodirectivainputpadreComponent},
+  {path: 'addprovee', component: AddproveeComponent},
+  {path:'**', component: InicioComponent}
+];
 
 @NgModule({
   declarations: [
@@ -46,10 +59,14 @@ import { TestproveedoresComponent } from './testproveedores/testproveedores.comp
     UsodirectivainputhijoComponent,
     PipeeuroPipe,
     Pipeeuro2Pipe,
-    TestproveedoresComponent
+    TestproveedoresComponent,
+    InicioComponent,
+    HeaderComponent,
+    AddproveeComponent
   ],
   imports: [
     BrowserModule,
+    RouterModule.forRoot(routes),
     FormsModule
   ],
   providers: [
