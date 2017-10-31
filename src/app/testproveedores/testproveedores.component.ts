@@ -5,7 +5,8 @@ import {ProveedoresService} from '../servicios/proveedores.service';
 @Component({
   selector: 'app-testproveedores',
   templateUrl: './testproveedores.component.html',
-  styleUrls: ['./testproveedores.component.css']
+  styleUrls: ['./testproveedores.component.css'],
+  providers: [ProveedoresService]
 })
 
 export class TestproveedoresComponent implements OnInit {
@@ -13,9 +14,10 @@ export class TestproveedoresComponent implements OnInit {
   proveedores : any;
 
   constructor( private proveedoresService : ProveedoresService) { }
+
   ngOnInit() {
-    this.mensaje = this.proveedoresService.getVersion();
-    this.proveedores = this.proveedoresService.getProviders();
+      this.mensaje = this.proveedoresService.getVersion();
+      this.proveedores = this.proveedoresService.getProviders();
   }
 
 }

@@ -24,7 +24,7 @@ import { Pipeeuro2Pipe } from './mispipes/pipeeuro2.pipe';
 import { TestproveedoresComponent } from './testproveedores/testproveedores.component';
 
 // Importacion de servicios
-import { ProveedoresService } from './servicios/proveedores.service';
+//import { ProveedoresService } from './servicios/proveedores.service';
 
 @NgModule({
   declarations: [
@@ -53,7 +53,7 @@ import { ProveedoresService } from './servicios/proveedores.service';
     FormsModule
   ],
   providers: [
-    ProveedoresService
+
   ],
   bootstrap: [AppComponent]
 })
