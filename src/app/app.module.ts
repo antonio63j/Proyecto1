@@ -30,12 +30,16 @@ import { InicioComponent } from './inicio/inicio.component';
 import {Routes, RouterModule} from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { AddproveeComponent } from './formproveedores/addprovee/addprovee.component';
+import { AddpresComponent } from './formreactivopresupuesto/addpres/addpres.component';
+
+import {ReactiveFormsModule} from '@angular/forms';
 
 const routes: Routes = [
   {path:'', component: InicioComponent},
   {path: 'testproveedores',component: TestproveedoresComponent},
   {path: 'directivainput',component: UsodirectivainputpadreComponent},
   {path: 'addprovee', component: AddproveeComponent},
+  {path: 'addprovee', component: AddpresComponent},
   {path:'**', component: InicioComponent}
 ];
 
@@ -62,7 +66,8 @@ const routes: Routes = [
     TestproveedoresComponent,
     InicioComponent,
     HeaderComponent,
-    AddproveeComponent
+    AddproveeComponent,
+    AddpresComponent
   ],
   imports: [
     BrowserModule,
