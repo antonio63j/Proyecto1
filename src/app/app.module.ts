@@ -39,7 +39,7 @@ const routes: Routes = [
   {path: 'testproveedores',component: TestproveedoresComponent},
   {path: 'directivainput',component: UsodirectivainputpadreComponent},
   {path: 'addprovee', component: AddproveeComponent},
-  {path: 'addprovee', component: AddpresComponent},
+  {path: 'addpres', component: AddpresComponent},
   {path:'**', component: InicioComponent}
 ];
 
@@ -72,7 +72,8 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
 
