@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 // Para control de formularios reactivos
 import {FormControl, FormGroup, FormBuilder, Validators} from '@angular/forms';
+import {PresupuestosService} from '../../servicios/presupuestos.service';
 
 @Component({
   selector: 'app-addpres',
@@ -17,7 +18,8 @@ export class AddpresComponent implements OnInit {
   iva: any = 0;
   total: any = 0;
 
-  constructor(public pf : FormBuilder) { }
+  constructor(private pf: FormBuilder,
+              private presupuestoService: PresupuestosService){}
 
   ngOnInit() {
     this.presupuestoForm = this.pf.group({
@@ -34,7 +36,9 @@ export class AddpresComponent implements OnInit {
 
   onSubmit (){
     this.presupuesto = this.savePresupuesto();
-
+    this.presupuestoService.postPresupuesto(this.presupuesto)
+     .subscribe(newpres => { });
+     this.presupuestoForm.reset();
   }
 
   savePresupuesto (){
@@ -56,4 +60,5 @@ export class AddpresComponent implements OnInit {
       this.tipo = valor.tipo;
       this.presupuestoForm.value.iva = this.base * this.tipo;
       this.presupuestoForm.value.total = this.base + (this.base * this.tipo); }); }
+
 }

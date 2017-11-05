@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset 2">
-    <h2>Añadir nuevo presupuesto</h2>
-      <a class="btn btn-primary float-md-right" routerLink="/listapresupuestos">Regresar al listado</a>
+    <h2>Editar Presupuesto</h2>
+    <a class="btn btn-primary float-md-right" routerLink="/listapresupuestos">Regresar al listado</a>
     <br>
     <form [formGroup]="presupuestoForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
@@ -14,7 +14,8 @@
           <input type="text"
                  class="form-control"
                  id="proveedor"
-                 formControlName="proveedor">
+                 formControlName="proveedor"
+                 [(ngModel)]="presupuesto.proveedor">
           <p class="alert alert-danger" *ngIf="presupuestoForm.controls.proveedor.invalid &&
                  presupuestoForm.controls.proveedor.touched">
             El campo Proveedor es obligatorio.
@@ -30,7 +31,8 @@
           <input type="date"
                  class="form-control"
                  id="fecha"
-                 formControlName="fecha">
+                 formControlName="fecha"
+                 [(ngModel)]="presupuesto.fecha">
           <p class="alert alert-danger" *ngIf="presupuestoForm.controls.fecha.invalid &&
                  presupuestoForm.controls.fecha.touched">
             El campo Fecha es obligatorio.
@@ -46,10 +48,11 @@
           <input type="text"
                  class="form-control"
                  id="concepto"
-                 formControlName="concepto">
+                 formControlName="concepto"
+                 [(ngModel)]="presupuesto.concepto">
           <p class="alert alert-danger" *ngIf="presupuestoForm.controls.concepto.invalid &&
                  presupuestoForm.controls.concepto.touched">
-            El campo Concepto es obligatorio y debe tener más de 12 caracteres.
+            El campo Concepto es obligatorio y debe tener más de 10 caracteres.
           </p>
         </div>
         <div class="form-group">
@@ -62,7 +65,8 @@
           <input type="number"
                  class="form-control"
                  id="base"
-                 formControlName="base">
+                 formControlName="base"
+                 [(ngModel)]="presupuesto.base">
           <p class="alert alert-danger" *ngIf="presupuestoForm.controls.base.invalid &&
                  presupuestoForm.controls.base.touched">
             El campo Base Imponible es obligatorio.
@@ -77,7 +81,8 @@
                presupuestoForm.controls.tipo.touched"></i>
           <select class="form-control"
                   id="tipo"
-                  formControlName="tipo">
+                  formControlName="tipo"
+                  [(ngModel)]="presupuesto.tipo">
                   <option value="">Seleccione...</option>
                   <option value=0> 0 %</option>
                   <option value=0.04> 4 %</option>
@@ -110,17 +115,12 @@
         <button type="submit"
               class="btn btn-primary"
               [disabled]="!presupuestoForm.valid"
-              >Añadir Presupuesto</button>
+              >Guardar Cambios</button>
+        <a class="btn btn-danger" routerLink="/listapresupuestos">Cancelar</a>
         <p class="alert alert-danger" *ngIf="!presupuestoForm.valid">
           Por favor complete todos los campos
         </p>
-        <a class="btn btn-danger" routerLink="/listapresupuestos">Cancelar</a>
-
     </form>
     <hr>
-    <pre>Valor del formulario: {{ presupuestoForm.value | json }}</pre>
-    <pre>Status del formulario: {{ presupuestoForm.status | json }}</pre>
-    <hr>
-    <pre>{{ presupuesto | json }}</pre>
    </div>
 </div>

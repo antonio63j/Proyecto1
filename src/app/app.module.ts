@@ -34,12 +34,23 @@ import { AddpresComponent } from './formreactivopresupuesto/addpres/addpres.comp
 
 import {ReactiveFormsModule} from '@angular/forms';
 
+import {HttpModule } from '@angular/http';
+
+// El servicio ProveedoresService es importado por su cliente mientras que
+// PresupuestosService es importado aquí y estará disponimbre para cualquier componente
+// import { ProveedoresService} from 'app/servicios/proveedores.service';
+import {PresupuestosService} from 'app/servicios/presupuestos.service';
+import { ListapresComponent } from './formreactivopresupuesto/listapres/listapres.component';
+import { EditpresComponent } from './formreactivopresupuesto/editpres/editpres.component';
+
 const routes: Routes = [
   {path:'', component: InicioComponent},
   {path: 'testproveedores',component: TestproveedoresComponent},
   {path: 'directivainput',component: UsodirectivainputpadreComponent},
   {path: 'addprovee', component: AddproveeComponent},
   {path: 'addpres', component: AddpresComponent},
+  {path: 'listapresupuestos', component: ListapresComponent},
+  {path: 'editpres/:id', component: EditpresComponent},
   {path:'**', component: InicioComponent}
 ];
 
@@ -67,16 +78,19 @@ const routes: Routes = [
     InicioComponent,
     HeaderComponent,
     AddproveeComponent,
-    AddpresComponent
+    AddpresComponent,
+    ListapresComponent,
+    EditpresComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpModule
   ],
   providers: [
-
+    PresupuestosService
   ],
   bootstrap: [AppComponent]
 })
