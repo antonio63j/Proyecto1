@@ -24,9 +24,6 @@ import { Pipeeuro2Pipe } from './mispipes/pipeeuro2.pipe';
 import { TestproveedoresComponent } from './testproveedores/testproveedores.component';
 import { InicioComponent } from './inicio/inicio.component';
 
-// Importacion de servicios
-//import { ProveedoresService } from './servicios/proveedores.service';
-
 import {Routes, RouterModule} from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { AddproveeComponent } from './formproveedores/addprovee/addprovee.component';
@@ -40,8 +37,11 @@ import {HttpModule } from '@angular/http';
 // PresupuestosService es importado aquí y estará disponimbre para cualquier componente
 // import { ProveedoresService} from 'app/servicios/proveedores.service';
 import {PresupuestosService} from 'app/servicios/presupuestos.service';
+import {AutenticacionService} from './servicios/autenticacion.service';
+
 import { ListapresComponent } from './formreactivopresupuesto/listapres/listapres.component';
 import { EditpresComponent } from './formreactivopresupuesto/editpres/editpres.component';
+import { RegistroComponent } from './autenticacion/registro/registro.component';
 
 const routes: Routes = [
   {path:'', component: InicioComponent},
@@ -51,6 +51,7 @@ const routes: Routes = [
   {path: 'addpres', component: AddpresComponent},
   {path: 'listapresupuestos', component: ListapresComponent},
   {path: 'editpres/:id', component: EditpresComponent},
+  {path: 'registro', component: RegistroComponent},
   {path:'**', component: InicioComponent}
 ];
 
@@ -80,7 +81,8 @@ const routes: Routes = [
     AddproveeComponent,
     AddpresComponent,
     ListapresComponent,
-    EditpresComponent
+    EditpresComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,
@@ -90,7 +92,8 @@ const routes: Routes = [
     HttpModule
   ],
   providers: [
-    PresupuestosService
+    PresupuestosService,
+    AutenticacionService
   ],
   bootstrap: [AppComponent]
 })
