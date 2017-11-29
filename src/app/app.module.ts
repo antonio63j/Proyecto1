@@ -36,7 +36,7 @@ import {HttpModule } from '@angular/http';
 // El servicio ProveedoresService es importado por su cliente mientras que
 // PresupuestosService es importado aquí y estará disponimbre para cualquier componente
 // import { ProveedoresService} from 'app/servicios/proveedores.service';
-import {PresupuestosService} from 'app/servicios/presupuestos.service';
+import {PresupuestosService} from './servicios/presupuestos.service';
 import {AutenticacionService} from './servicios/autenticacion.service';
 
 import { ListapresComponent } from './formreactivopresupuesto/listapres/listapres.component';

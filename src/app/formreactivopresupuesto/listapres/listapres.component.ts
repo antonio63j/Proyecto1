@@ -18,7 +18,7 @@ export class ListapresComponent implements OnInit {
              p.id$ = id$;
              this.listaDePresupuestos.push(lpresupuestos[id$]);
           }
-        })
+        });
   }
   ngOnInit() {
   }

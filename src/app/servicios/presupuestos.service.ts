@@ -8,7 +8,7 @@ export class PresupuestosService {
   presURL = 'https://comprasapp-fdc30.firebaseio.com/presupuestos.json';
   presupuestoURL = 'https://comprasapp-fdc30.firebaseio.com/presupuestos';
 
-  constructor(private http:Http) { }
+  constructor(private http: Http) { }
 
   postPresupuesto( presupuesto: any) {
     const newpres = JSON.stringify(presupuesto);
@@ -21,10 +21,10 @@ export class PresupuestosService {
 
   getPresupuestos () {
    return this.http.get(this.presURL)
-    .map( res => res.json());
+    .map( resultado => resultado.json());
   }
 
-  getPresupuesto(idPres:string){
+  getPresupuesto(idPres: string) {
     const url = `${ this.presupuestoURL }/${ idPres }.json`;
     return this.http.get( url)
      .map( res => res.json());
@@ -42,7 +42,7 @@ export class PresupuestosService {
       .map( res => {
         console.log(res.json());
         return res.json();
-        })
+        });
   }
 
   delPresupuesto ( id$: string ) {

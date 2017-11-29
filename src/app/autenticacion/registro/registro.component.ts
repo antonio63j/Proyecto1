@@ -54,8 +54,8 @@ export class RegistroComponent implements OnInit {
   onValueChanged(data?: any) {
      if (!this.registroForm) { return; }
      const form = this.registroForm;
-     for (const field in this.erroresForm) {
-
+    //  for (const field in this.erroresForm) {
+       for (const field of Object.keys (this.erroresForm )){
        this.erroresForm[field] = '';
        const control = form.get(field);
        if (control && control.dirty && !control.valid) {
