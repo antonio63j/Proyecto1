@@ -8,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class EjpropertybindingComponent implements OnInit {
 
   texto = 'Escribe algo';
-  constructor() { setTimeout(() => { this.texto = 'por favor'; }, 3000); 
+  angularLogo = 'https://academia-binaria.com/images/tutorial-angular-5_5_inject.png';
+  constructor() { setTimeout(() => { this.texto = 'por favor...'; }, 3000); 
   }
 
   ngOnInit() {

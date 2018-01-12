@@ -8,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class Ej2waybindingComponent implements OnInit {
 
   texto = 'Texto original a cargar';
-  
+  numero = 10;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  incrementarNumero() {
+     this.numero = this.numero + 1;
   }
 
 }

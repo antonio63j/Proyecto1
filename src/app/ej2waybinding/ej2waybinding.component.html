@@ -1,3 +1,9 @@
-<label>Introduce un texto</label>
+<!-- <label>Introduce un texto</label>
 <input type="text" [(ngModel)]="texto">
-<h3>{{texto}}</h3>
+<h3>{{texto}}</h3> -->
+<label> Introduce un numero</label>
+<input type="number" [(ngModel)] = "numero">
+<h3>{{numero}}</h3>
+<button class="btn btn-success"
+(click)="incrementarNumero()">Click para incrementar número
+</button>
