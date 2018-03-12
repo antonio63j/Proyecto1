@@ -42,9 +42,13 @@ import {AutenticacionService} from './servicios/autenticacion.service';
 import { ListapresComponent } from './formreactivopresupuesto/listapres/listapres.component';
 import { EditpresComponent } from './formreactivopresupuesto/editpres/editpres.component';
 import { RegistroComponent } from './autenticacion/registro/registro.component';
+import { RainbowDirectiveDirective } from './misdirectivas/rainbow-directive.directive';
+import { UsoDirectivaRainbowComponent} from './uso-directiva-rainbow/uso-directiva-rainbow.component';
+import { ConfirmDirectiveDirective } from './misdirectivas/confirm-directive.directive';
+import { UsoDirectivaConfirmComponent } from './uso-directiva-confirm/uso-directiva-confirm.component';
 
 const routes: Routes = [
-  {path:'', component: InicioComponent},
+  {path: '', component: InicioComponent},
   {path: 'testproveedores',component: TestproveedoresComponent},
   {path: 'directivainput',component: UsodirectivainputpadreComponent},
   {path: 'addprovee', component: AddproveeComponent},
@@ -52,7 +56,7 @@ const routes: Routes = [
   {path: 'listapresupuestos', component: ListapresComponent},
   {path: 'editpres/:id', component: EditpresComponent},
   {path: 'registro', component: RegistroComponent},
-  {path:'**', component: InicioComponent}
+  {path: '**', component: InicioComponent}
 ];
 
 @NgModule({
@@ -82,7 +86,11 @@ const routes: Routes = [
     AddpresComponent,
     ListapresComponent,
     EditpresComponent,
-    RegistroComponent
+    RegistroComponent,
+    RainbowDirectiveDirective,
+    UsoDirectivaRainbowComponent,
+    ConfirmDirectiveDirective,
+    UsoDirectivaConfirmComponent
   ],
   imports: [
     BrowserModule,
