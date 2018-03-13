@@ -46,6 +46,8 @@ import { RainbowDirectiveDirective } from './misdirectivas/rainbow-directive.dir
 import { UsoDirectivaRainbowComponent} from './uso-directiva-rainbow/uso-directiva-rainbow.component';
 import { ConfirmDirectiveDirective } from './misdirectivas/confirm-directive.directive';
 import { UsoDirectivaConfirmComponent } from './uso-directiva-confirm/uso-directiva-confirm.component';
+import { TextSnippetDirective } from './misdirectivas/test-snippets.directive';
+import { TextSnippetComponent } from './uso-directiva-test-snippets/uso-directiva-test-snippets.component';
 
 const routes: Routes = [
   {path: '', component: InicioComponent},
@@ -90,7 +92,10 @@ const routes: Routes = [
     RainbowDirectiveDirective,
     UsoDirectivaRainbowComponent,
     ConfirmDirectiveDirective,
-    UsoDirectivaConfirmComponent
+    UsoDirectivaConfirmComponent,
+    TextSnippetDirective,
+    TextSnippetComponent
+
   ],
   imports: [
     BrowserModule,

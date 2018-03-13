@@ -5,12 +5,12 @@ import { Component } from '@angular/core';
   template: `
   <header>Click the buttons to see the confirmation message.</header>
   <p>
-    <button [ConfirmDirectiveDirective]="'Are you sure you want to change the color to blue?'"
+    <button [appConfirmDirective]="'Are you sure you want to change the color to blue?'"
             [functionToRun]="setBoxColor('dodgerblue')"
             [disabled]="boxColor==='dodgerblue'">
       Blue
     </button>
-    <button ConfirmDirectiveDirective="Are you sure you want to change the color to red?"
+    <button appConfirmDirective="Are you sure you want to change the color to red?"
             [functionToRun]="setBoxColor('crimson')"
             [disabled]="boxColor==='crimson'">
       Red
@@ -30,7 +30,7 @@ styles: [`
 
 export class UsoDirectivaConfirmComponent {
 
-  boxColor = 'dodgerblue';
+  boxColor = 'grey';
   setBoxColor(color: string) {
       return () => this.boxColor = color;
     }
