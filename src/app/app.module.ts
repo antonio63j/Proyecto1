@@ -48,6 +48,8 @@ import { ConfirmDirectiveDirective } from './misdirectivas/confirm-directive.dir
 import { UsoDirectivaConfirmComponent } from './uso-directiva-confirm/uso-directiva-confirm.component';
 import { TextSnippetDirective } from './misdirectivas/test-snippets.directive';
 import { TextSnippetComponent } from './uso-directiva-test-snippets/uso-directiva-test-snippets.component';
+import { AppDestroy } from './testdestroy/testdestroy.component';
+import { TestDestroy } from './testdestroy/testdestroy.component';
 
 const routes: Routes = [
   {path: '', component: InicioComponent},
@@ -94,8 +96,9 @@ const routes: Routes = [
     ConfirmDirectiveDirective,
     UsoDirectivaConfirmComponent,
     TextSnippetDirective,
-    TextSnippetComponent
-
+    TextSnippetComponent,
+    TestDestroy,
+    AppDestroy
   ],
   imports: [
     BrowserModule,

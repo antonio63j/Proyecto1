@@ -20,4 +20,8 @@ export class TestproveedoresComponent implements OnInit {
       this.proveedores = this.proveedoresService.getProviders();
   }
 
+  // tslint:disable-next-line:use-life-cycle-interface
+  ngOnDestroy() {
+
+  }
 }
