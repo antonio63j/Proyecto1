@@ -1,7 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import {FormsModule} from '@angular/forms';
+import {Routes, RouterModule} from '@angular/router';
+import {ReactiveFormsModule} from '@angular/forms';
+import {HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { CopyrightComponent } from './copyright/copyright.component';
@@ -24,14 +26,12 @@ import { Pipeeuro2Pipe } from './mispipes/pipeeuro2.pipe';
 import { TestproveedoresComponent } from './testproveedores/testproveedores.component';
 import { InicioComponent } from './inicio/inicio.component';
 
-import {Routes, RouterModule} from '@angular/router';
+
 import { HeaderComponent } from './header/header.component';
 import { AddproveeComponent } from './formproveedores/addprovee/addprovee.component';
 import { AddpresComponent } from './formreactivopresupuesto/addpres/addpres.component';
 
-import {ReactiveFormsModule} from '@angular/forms';
 
-import {HttpModule } from '@angular/http';
 
 // El servicio ProveedoresService es importado por su cliente mientras que
 // PresupuestosService es importado aquí y estará disponimbre para cualquier componente
@@ -42,14 +42,19 @@ import {AutenticacionService} from './servicios/autenticacion.service';
 import { ListapresComponent } from './formreactivopresupuesto/listapres/listapres.component';
 import { EditpresComponent } from './formreactivopresupuesto/editpres/editpres.component';
 import { RegistroComponent } from './autenticacion/registro/registro.component';
+
 import { RainbowDirectiveDirective } from './misdirectivas/rainbow-directive.directive';
 import { UsoDirectivaRainbowComponent} from './uso-directiva-rainbow/uso-directiva-rainbow.component';
+
 import { ConfirmDirectiveDirective } from './misdirectivas/confirm-directive.directive';
 import { UsoDirectivaConfirmComponent } from './uso-directiva-confirm/uso-directiva-confirm.component';
+
 import { TextSnippetDirective } from './misdirectivas/test-snippets.directive';
 import { TextSnippetComponent } from './uso-directiva-test-snippets/uso-directiva-test-snippets.component';
+
 import { AppDestroy } from './testdestroy/testdestroy.component';
 import { TestDestroy } from './testdestroy/testdestroy.component';
+// import { Service } from './testdestroy/testdestroy.component';
 
 const routes: Routes = [
   {path: '', component: InicioComponent},
@@ -110,6 +115,7 @@ const routes: Routes = [
   providers: [
     PresupuestosService,
     AutenticacionService
+    // Service
   ],
   bootstrap: [AppComponent]
 })
